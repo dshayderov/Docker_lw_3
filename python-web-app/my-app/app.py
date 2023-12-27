@@ -12,7 +12,7 @@ app = Flask(__name__, template_folder=str(Path(__file__).parent))
 @app.route("/users/", methods=['GET','POST'])
 def hello_user():
 	user = request.args.get('u')
-	return render_template("index.html", message="Hello, {}!".format(user))
+	return render_template("index.html", message = f"Hello, {user}!")
 
 
 if __name__ == "__main__":
